@@ -1,16 +1,35 @@
-console.log("hey ninjas");
+function callFunction(fun){
+    fun();
+}
 
-console.log(__dirname);
-console.log(__filename);
 
-var time = 0;
-var timer = setInterval(function(){
-    time += 2;
-    console.log(time + " seconds have passed");
-    if ( time > 5){
-        clearInterval(timer);
-    }
-}, 2000);
+
+//normal function statement
+// function sayHi(){
+//     console.log("hi");
+// }
+
+// sayHi();
+
+var sayBye = function(){
+ console.log("bye");
+};
+
+callFunction(sayBye);
+
+// console.log("hey ninjas");
+
+// console.log(__dirname);
+// console.log(__filename);
+
+// var time = 0;
+// var timer = setInterval(function(){
+//     time += 2;
+//     console.log(time + " seconds have passed");
+//     if ( time > 5){
+//         clearInterval(timer);
+//     }
+// }, 2000);
 
 
 // setTimeout(function(){
