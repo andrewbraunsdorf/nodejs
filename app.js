@@ -1,21 +1,25 @@
-function callFunction(fun){
-    fun();
-}
+var counter = require("./count");
 
+console.log(counter(["shaun", "crystal", "ryu"]));
 
-
-//normal function statement
-// function sayHi(){
-//     console.log("hi");
+// function callFunction(fun){
+//    fun();
 // }
 
-// sayHi();
 
-var sayBye = function(){
- console.log("bye");
-};
 
-callFunction(sayBye);
+// //normal function statement
+// // function sayHi(){
+// //     console.log("hi");
+// // }
+
+// // sayHi();
+
+// var sayBye = function(){
+//  console.log("bye");
+// };
+
+// callFunction(sayBye);
 
 // console.log("hey ninjas");
 
@@ -36,12 +40,3 @@ callFunction(sayBye);
 //     console.log("3 seconds have passed")
 // }, 3000);
 
-
-// var fs = require('fs');
-
-// var file = fs.readFile('input.txt','utf8',function(err,data){
-//     fs.writeFile('writeme.txt',data);
-//     console.log(data);
-// });
-
-// console.log('This is an instruction outside the sync file system.');
