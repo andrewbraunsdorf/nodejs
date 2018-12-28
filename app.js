@@ -1,44 +1,33 @@
-var stuff = require("./stuff");
+var events = require("events");
 
-console.log(stuff.counter(["shaun", "crystal", "ryu"]));
-console.log(stuff.adder(5,6));
-console.log(stuff.adder(stuff.pi,5));
+var util = require('util');
 
-// function callFunction(fun){
-//    fun();
-// }
+var Person = function(name){
+	this.name = name;
+};
 
+util.inherits(Person, events.EventEmitter);
 
+var james = new Person("James");
+var mary = new Person("Mary");
+var ryu = new Person("ryu");
 
-// //normal function statement
-// // function sayHi(){
-// //     console.log("hi");
-// // }
+var people = [james, mary, ryu];
 
-// // sayHi();
+people.forEach(function(person){
+	person.on("speak", function(msg){
+		console.log(person.name + " said: " + msg);
+	});
+});
 
-// var sayBye = function(){
-//  console.log("bye");
-// };
-
-// callFunction(sayBye);
-
-// console.log("hey ninjas");
-
-// console.log(__dirname);
-// console.log(__filename);
-
-// var time = 0;
-// var timer = setInterval(function(){
-//     time += 2;
-//     console.log(time + " seconds have passed");
-//     if ( time > 5){
-//         clearInterval(timer);
-//     }
-// }, 2000);
+james.emit("speak", "hey dudes");
+ryu.emit("speak", "I want a curry");
 
 
-// setTimeout(function(){
-//     console.log("3 seconds have passed")
-// }, 3000);
+// var myEmitter = new events.EventEmitter();
 
+// myEmitter.on("someEvent", function(msg){
+// 	console.log(msg);
+// });
+
+// myEmitter.emit("someEvent", "the event was emitted");
