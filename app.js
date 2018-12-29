@@ -1,12 +1,24 @@
 var fs = require("fs");
 
-fs.readFile("readme.txt", "utf8", function(err, data){
-	fs.writeFile("writeMe.txt", data);
+fs.unlink("./stuff/writeMe.txt", function(){
+	
+
+fs.rmdir("stuff");
 });
+// fs.mkdir("stuff", function(){
+// 	fs.readFile("readMe.text", "utf8", function(err, data){
+// 	fs.writeFile("./stuff/writeMe.txt", data);
+// 	});
+// });
 
 
+// fs.unlink("writeMe.txt");
 
 
+//delete files using unlink, 2nd time running it, there is an error, as no such file exists, then used .mkdirSync("stuff") to create a directory called stuff, to remove a directory you use .rmdirSync("stuff"), then created asynchronous version by using .mkdir("stuff"), then deleted it using .rmdir("stuff"), but can only remove the directory when it is empty.
+// fs.readFile("readme.txt", "utf8", function(err, data){
+// 	fs.writeFile("writeMe.txt", data);
+// });
 //code
 //console.log("test");
 // var readMe = fs.readFileSync("readme.txt", "utf8");
