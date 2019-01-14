@@ -15,7 +15,7 @@ fs.rmdir("stuff");
 // fs.unlink("writeMe.txt");
 
 
-//delete files using unlink, 2nd time running it, there is an error, as no such file exists, then used .mkdirSync("stuff") to create a directory called stuff, to remove a directory you use .rmdirSync("stuff"), then created asynchronous version by using .mkdir("stuff"), then deleted it using .rmdir("stuff"), but can only remove the directory when it is empty.
+//delete files using unlink, 2nd time running it, there is an error, as no such file exists, then used .mkdirSync("stuff") to create a directory called stuff, to remove a directory you use .rmdirSync("stuff"), then created asynchronous version by using .mkdir("stuff"), then deleted it using .rmdir("stuff"), but can only remove the directory when it is empty. had to use the unlink method to remove the file first."
 // fs.readFile("readme.txt", "utf8", function(err, data){
 // 	fs.writeFile("writeMe.txt", data);
 // });
