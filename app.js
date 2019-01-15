@@ -18,7 +18,7 @@ var server = http.createServer(function(req, res){
 		fs.createReadStream(__dirname + "/404.html").pipe(res);
 	}
 	});
- 
+
 server.listen(8080, "0.0.0.0");
 console.log("You are listening to port 8080");
 
