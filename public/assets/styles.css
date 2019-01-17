@@ -10,7 +10,7 @@ body{
     background: #090d13;
     margin: 0 auto;
     padding: 20px;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 
 #todo-table form:after{
@@ -36,7 +36,7 @@ button{
     float: left;
     background: #23282e;
     border: 0;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     color: #fff;
     cursor: pointer;
     font-size: 20px;
@@ -51,7 +51,7 @@ ul{
 li{
     width: 100%;
     padding: 20px;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     font-family: arial;
     font-size: 20px;
     cursor: pointer;

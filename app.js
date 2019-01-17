@@ -1,5 +1,5 @@
 var express = require("express");
-var todocontroller = require("./controllers/todcontroller");
+var todocontroller = require("./controllers/todocontroller");
 var app =express();
 
 
@@ -7,7 +7,9 @@ var app =express();
 app.set("view engine", "ejs");
 
 //static files
-app.use(express.static("./public"));
+////Didn't work as NN listed
+// app.use(express.static("./public"));
+app.use('/public', express.static('public'));
 
 //fire controllers
 todocontroller(app);
